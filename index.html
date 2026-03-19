@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gyumentum</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/clock.css" />
+    <link rel="stylesheet" href="/css/greeting.css" />
+    <link rel="stylesheet" href="/css/pomodoro.css" />
+    <link rel="stylesheet" href="/css/quotes.css" />
+    <link rel="stylesheet" href="/css/todo.css" />
+    <link rel="stylesheet" href="/css/weather.css" />
+  </head>
+  <body>
+    <script src="/js/bg.js"></script>
+    <div id="app-tabs">
+      <button class="tab active" data-tab="todo">할 일</button>
+      <button class="tab" data-tab="pomodoro">포모도로</button>
+    </div>
+    <h2 id="clock">00:00</h2>
+    <button id="clock-toggle" class="clock-btn">24시간</button>
+    <div id="login-screen" class="hidden">
+      <form id="login-form">
+        <input
+          id="username-input"
+          required
+          maxlength="15"
+          type="text"
+          placeholder="안녕! 이름이 뭐야?"
+          autofocus
+        />
+      </form>
+    </div>
+    <div id="app" class="hidden">
+      <form id="todo-form">
+        <input type="text" placeholder="오늘의 할일은?" />
+      </form>
+      <ul id="todo-list"></ul>
+
+      <div id="pomodoro-area" class="hidden">
+        <div id="pomodoro-tabs">
+          <button class="pomodoro-tab active" data-mode="focus">집중</button>
+          <button class="pomodoro-tab" data-mode="rest">휴식</button>
+        </div>
+        <div id="pomodoro-timer-wrapper">
+          <h2 id="pomodoro-time">25:00</h2>
+          <div id="pomodoro-controls">
+            <div class="duration-row">
+              <span id="duration-label"></span>
+              <button class="duration-btn" data-change="down">-</button>
+              <button class="duration-btn" data-change="up">+</button>
+            </div>
+          </div>
+          <div id="pomodoro-actions">
+            <button id="pomodoro-start">시작</button>
+            <button id="pomodoro-pause">일시정지</button>
+            <button id="pomodoro-reset">리셋</button>
+          </div>
+        </div>
+        <div class="toggle-container">
+          <span class="toggle-label">소리 ON</span>
+          <label class="ios-toggle-switch">
+            <input type="checkbox" id="pomodoro-silent-toggle" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+      <h1 id="greeting" class="hidden"></h1>
+      <div id="quote">
+        <span></span>
+        <span></span>
+      </div>
+
+      <div id="todo-toggle">
+        <p>할 일</p>
+        <svg
+          data-v-8b7b1d92=""
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          id="unchecked"
+          class="hidden"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m17 8-6.875 7L7 11.818M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2"
+          ></path>
+        </svg>
+        <svg
+          data-v-8b7b1d92=""
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          id="checked"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.752 2.016c-1.37.116-2.467 1.124-2.715 2.496-.049.268-.049 14.708 0 14.976a3.03 3.03 0 0 0 2.475 2.475c.268.049 14.708.049 14.976 0a3.03 3.03 0 0 0 2.475-2.475c.049-.268.049-14.708 0-14.976-.226-1.249-1.12-2.171-2.379-2.454l-.228-.052-7.2-.004c-3.96-.002-7.292.004-7.404.014M17.43 7.103c.393.194.629.644.552 1.056-.052.278-.118.38-.515.787-.202.208-1.801 1.838-3.554 3.623-2.891 2.943-3.201 3.252-3.336 3.318a.97.97 0 0 1-.891.005c-.126-.06-.244-.168-.88-.81-2.012-2.034-2.611-2.656-2.683-2.791a.998.998 0 0 1 .568-1.417 1.01 1.01 0 0 1 .888.136c.065.05.662.644 1.326 1.321s1.216 1.227 1.226 1.224a536 536 0 0 0 3.118-3.163c1.964-2.001 3.144-3.185 3.223-3.235.191-.121.307-.15.569-.141.202.007.249.018.389.087"
+          ></path>
+        </svg>
+      </div>
+    </div>
+    <div id="weather">
+      <span>날씨 보고 온다 ㄱㄷ</span>
+      <span></span>
+    </div>
+  </body>
+  <script type="module" src="js/main.js"></script>
+  <script src="/js/todo.js"></script>
+  <script src="/js/quotes.js"></script>
+  <script src="/js/weather.js"></script>
+</html>

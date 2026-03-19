@@ -1,0 +1,4 @@
+#clock { color: white; font-size: clamp(48px, 10vw, 128px); position: absolute; margin: 0; top: 34%; left: 50%; transform: translate(-50%, -50%); }
+
+#clock-toggle { position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); border: 1px solid rgba(255, 255, 255, 0.6); color: white; background: rgba(0, 0, 0, 0.35); border-radius: 999px; padding: 6px 13px; cursor: pointer; font-weight: 600; }
+#clock-toggle:hover { background: rgba(255, 255, 255, 0.1); }

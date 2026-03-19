@@ -1,0 +1,2 @@
+#weather span:first-child { position: absolute; right: 30px; top: 20px; font-size: 18px; color: white; }
+#weather span:last-child { position: absolute; right: 30px; top: 50px; font-size: 23px; color: white; font-weight: 600; }

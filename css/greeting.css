@@ -1,0 +1,1 @@
+#greeting { width: min(90vw, 700px); color: white; font-size: clamp(24px, 4vw, 48px); position: absolute; margin: 0; top: 55%; left: 50%; transform: translate(-50%, -50%); }

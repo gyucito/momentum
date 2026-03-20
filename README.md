@@ -65,9 +65,6 @@ cd momentum
 VS Code Live Server 또는 간단한 웹 서버 실행
 index.html을 브라우저에서 직접 열어도 됨
 
-(선택) 배경 이미지 추가
-img 태그의 src를 원하는 배경 이미지 URL로 변경
-
 
 **2. 사용 방법**
 - 처음 접속 → 이름 입력 (Enter)

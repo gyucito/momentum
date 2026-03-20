@@ -23,7 +23,7 @@ function updateGreeting() {
   let greetingText;
 
   if (hour >= 6 && hour < 12) {
-    greetingText = `좋은 아침 ${username}!, 오늘도 힘내!`;
+    greetingText = `좋은 아침 ${username}! 오늘도 힘내!`;
   } else if (hour >= 12 && hour < 18) {
     greetingText = `점심 잘 챙기고 있니, ${username}?`;
   } else {
